@@ -28,6 +28,9 @@ app.get('/', async(req, res) => {
         const response = await request.get(URL);
     
         const newResponse = mungeMovie(response.body);
+
+        // STRICTLY TYPED language
+        // TYPESCRIPT is a SUPERSET of JS
     
         res.json(newResponse);
     } catch (e) {
