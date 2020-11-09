@@ -23,7 +23,7 @@ must respond with an object with this shape:
 */
 app.get('/', async(req, res) => {
     try {
-        const URL = 'https://api.themoviedb.org/3/movie/551?api_key=7427fb7f3e98454434abddd4dd47ef96';
+        const URL = `https://api.themoviedb.org/3/movie/${req.query.movie}?api_key=${process.env.MOVIE_KEY}`;
     
         const response = await request.get(URL);
     
